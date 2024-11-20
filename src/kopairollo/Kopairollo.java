@@ -23,20 +23,20 @@ public class Kopairollo {
         System.out.println("Udvozollek a Ko, Papir, Ollo jatekban!");
         System.out.println("Valassz: Ko, Papir vagy Ollo (ird be a szot pontosan):");
 
-        // Játékos választása
+
         String playerChoice = scanner.nextLine();
 
-        // Ellenőrizzük a bemenetet
+
         if (!playerChoice.equals("Ko") && !playerChoice.equals("Papir") && !playerChoice.equals("Ollo")) {
             System.out.println("Ervénytelen valasztas! Csak 'Ko', 'Papir' vagy 'Ollo' lehet.");
             return;
         }
 
-        // Számítógép választása
+
         String computerChoice = choices[random.nextInt(3)];
         System.out.println("A szamitogép valasztasa: " + computerChoice);
 
-        // Eredmény kiszámítása
+
         if (playerChoice.equals(computerChoice)) {
             System.out.println("Dontetlen! Mindketten " + playerChoice + "-t valasztottatok.");
         } else if ((playerChoice.equals("Ko") && computerChoice.equals("Ollo")) ||
